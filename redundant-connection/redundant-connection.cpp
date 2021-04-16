@@ -12,10 +12,9 @@ public:
     int find(int c)
     {
         int root = id[c];
-        while (root != c)
+        while(id[root]!=root)
         {
-            c = root;
-            root = id[root];
+            root=id[root];
         }
         return root;
     }
